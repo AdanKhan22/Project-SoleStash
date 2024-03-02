@@ -1,13 +1,55 @@
 import React from "react";
+import { useState, useRef, useEffect } from "react";
 import "./header.css";
 import sprite from "../assets/Icons/sprite.svg";
 
 export default function header() {
+  const menuRef = useRef(null);
+  const [isActive, setIsActive] = useState(false);
+  const [fixNav, setFixNav] = useState(false);
+
+  const handleNavToggle = () => {
+    setIsActive(!isActive);
+    document.body.classList.toggle("active");
+  };
+
+  const handleNavClose = () => {
+    setIsActive(false);
+    document.body.classList.remove("active");
+  };
+
+  const handleScrollLinkClick = () => {
+    setIsActive(false);
+    document.body.classList.remove("active");
+    console.log("hello");
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const navBar = document.querySelector(".navigation");
+      const navHeight = navBar.getBoundingClientRect().height;
+      const scrollHeight = window.pageYOffset;
+
+      if (scrollHeight > navHeight) {
+        setFixNav(true);
+      } else {
+        setFixNav(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <header id="header" className="header">
         {/* Navigation */}
-        <div className="navigation">
+        <div className={`navigation ${fixNav ? "fix__nav" : ""}`}>
           <div className="container">
             <nav className="nav__center">
               <div className="nav__header">
@@ -16,7 +58,7 @@ export default function header() {
                     SOLE<span> STASH</span>
                   </h1>
                 </div>
-                <div className="nav__hamburger">
+                <div className="nav__hamburger" onClick={handleNavToggle}>
                   <span>
                     <svg>
                       <use xlinkHref={`${sprite}#icon-menu`} />
@@ -24,12 +66,16 @@ export default function header() {
                   </span>
                 </div>
               </div>
-              <div className="nav__menu">
+              <div
+                ref={menuRef}
+                className="nav__menu"
+                style={{ left: isActive ? "0px" : "-40rem" }}
+              >
                 <div className="menu__top">
                   <h1 className="nav__category">
-                    SHOPI<span>Q</span>
+                    SOLE<span> STASH</span>
                   </h1>
-                  <div className="close__toggle">
+                  <div className="close__toggle" onClick={handleNavClose}>
                     <svg>
                       <use xlinkHref={`${sprite}#icon-cross`} />
                     </svg>
@@ -37,12 +83,20 @@ export default function header() {
                 </div>
                 <ul className="nav__list">
                   <li className="nav__item">
-                    <a href="#header" className="nav__link scroll-link">
+                    <a
+                      href="#header"
+                      className="nav__link scroll-link"
+                      onClick={() => handleScrollLinkClick()}
+                    >
                       Home
                     </a>
                   </li>
                   <li className="nav__item">
-                    <a href="#featured" className="nav__link scroll-link">
+                    <a
+                      href="#featured"
+                      className="nav__link scroll-link"
+                      onClick={() => handleScrollLinkClick()}
+                    >
                       Featured
                     </a>
                   </li>

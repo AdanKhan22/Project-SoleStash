@@ -8,6 +8,7 @@
   background-attachment: fixed;
   position: relative;
   z-index: 100;
+
 }
 
 
@@ -30,6 +31,8 @@
     position: relative;
     padding: 1.5rem 0;
     z-index: 100;
+    
+  
   }
   
   .fix__nav {
@@ -37,9 +40,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--white);
+    color: var(--white);
+
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: top 0.3s ease-in, box-shadow 0.3s ease; 
+    background-color: black;
   }
+  
   
   .nav__center .nav__hamburger {
     display: none;
@@ -63,7 +70,7 @@
   }
   
   .fix__nav .nav__logo h1 {
-    color: var(--dark-color);
+    color: var(--white);
   }
   
   .nav__header .nav__logo h1 span {
@@ -105,7 +112,7 @@
   
   .fix__nav .nav__item .nav__link:link,
   .fix__nav .nav__item .nav__link:visited {
-    color: var(--dark-color);
+    color: var(--white);
   }
   
   .nav__item .nav__link:hover {
@@ -139,7 +146,7 @@
   }
   
   .nav__icons .icon__item {
-    color: var(--grey-color);
+    color: var(--white);
     padding: 1rem;
   }
   
@@ -148,7 +155,7 @@
   }
   
   .fix__nav .nav__icons .icon__item svg {
-    fill: var(--dark-color);
+    fill: var(--white);
   }
   
   .nav__icons .icon__item:last-child {
@@ -275,7 +282,7 @@
   }
   
   /* =========== Navigation Media Query ============ */
-  
+
   @media only screen and (max-width: 996px) {
     .nav__icons {
       display: none;
@@ -287,7 +294,9 @@
   }
   
   @media only screen and (max-width: 768px) {
-  
+    .navigation {
+      background-color: var(--white);
+    }
   
     .nav__center {
       grid-template-columns: 1fr;

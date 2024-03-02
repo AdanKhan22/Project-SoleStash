@@ -12,8 +12,9 @@ import product9 from  "../assets/product (9).jpg"
 import product10 from  "../assets/product (10).jpg"
 
 
+
 export{
-   vans,
+  vans,
  jordons,
  product1,
  product2,
@@ -25,4 +26,5 @@ product7,
 product8,
 product9,
 product10
+
 };
