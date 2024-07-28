@@ -26,8 +26,10 @@ Coming Soon....
 
 ## Features
 
--Includes Front-End Pages i.e Product Pag, Cart , Description , Homepage
+-Includes Front-End Pages i.e Product Pag, Cart , Description , Homepage 
+
 -Project to be transformed into full-stack in Phase 2 
+
 -For database I'll be using MySQL
 
 ## Getting Started
@@ -73,12 +75,19 @@ yarn start
 If you would like to contribute, please follow these steps:
 
 -Fork the repository
+
 -Create a new branch (git checkout -b feature-branch)
+
 -Make your changes
+
 -Commit your changes (git commit -am 'Add new feature')
+
 -Push to the branch (git push origin feature-branch)
+
 -Create a new Pull Request
+
 -Please make sure your code adheres to our coding standards and has appropriate tests.
+
 
 ### License
 This project is licensed under the MIT License - see the LICENSE file for details.
