@@ -1,8 +1,8 @@
-# Project Name
+# Sole-Stash
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-A brief description of what your project does.
+Sole-Stash is an e-commerce website that primarly deals with selling thrifted shoes
 
 ## Table of Contents
 
