@@ -39,7 +39,7 @@ export default function footer() {
                     <use xlinkHref="./images/sprite.svg#icon-location" />
                   </svg>
                 </span>
-                43 Dream House, Dreammy street, 7131 Dreamville, USA
+                Defense City , Islamabad
               </div>
               <div>
                 <span>
@@ -47,7 +47,7 @@ export default function footer() {
                     <use xlinkHref="./images/sprite.svg#icon-envelop" />
                   </svg>
                 </span>
-                basudevnayak31@gmail.com
+                adanjavedkhan67@gmail.com
               </div>
               <div>
                 <span>
@@ -55,7 +55,7 @@ export default function footer() {
                     <use xlinkHref="./images/sprite.svg#icon-phone" />
                   </svg>
                 </span>
-                7407-338-338
+                00000-00000-00000
               </div>
               <div>
                 <span>
@@ -63,7 +63,7 @@ export default function footer() {
                     <use xlinkHref="./images/sprite.svg#icon-paperplane" />
                   </svg>
                 </span>
-                Dream City, KOLKATA
+                Pakistan
               </div>
             </div>
           </div>

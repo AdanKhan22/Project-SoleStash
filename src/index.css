@@ -7,6 +7,7 @@
   --grey-color-alt: #8492a6;
   --yellow: #ffcc00;
   --white: #ffffff;
+  --gray: rgb(220,220,220)
 }
 
 
@@ -34,7 +35,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: var(--dark-color);
-  background-color: var(--white);
+  
  
 	
 }

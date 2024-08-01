@@ -1,0 +1,83 @@
+.wrappermain{
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   width: 50%;
+   align-items: center;
+   justify-content: center;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: row;
+   color: red;
+   gap: 50px;
+   padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.wrapperin{
+   display: flex; /* Apply flexbox to arrange children */
+   flex-direction: row; /* Arrange children in a row */
+   justify-content: space-between; /* Distribute children evenly */
+   
+}
+
+.productImage {
+   width: 70px;
+   height: 70px; 
+}
+
+.textWrapper005 {
+   display: flex; /* Apply flexbox to arrange children */
+   flex-direction: column; /* Arrange children in a row */
+   margin: 10px 10px 10px 10px;
+   
+  
+}
+.pricetag13 {
+   display: flex; /* Apply flexbox to arrange children */
+   flex-direction: column; /* Arrange children in a row */
+   margin: 10px 10px 10px 10px;
+}
+.couponinsert {
+  /* Add styles for couponinsert here */
+}
+
+.discountform {
+  
+
+}
+
+.discount-input {
+   position: relative;
+   height: 30px;
+   width: 300px;
+   margin: 10px;
+}
+
+.discount-btn {
+  /* Add styles for discount-btn here */
+}
+
+.pricedetails {
+
+   display: flex; /* Apply flexbox to arrange children */
+   flex-direction: column; /* Arrange children in a row */
+   margin: 10px 10px 10px 10px;
+   gap: 10px; /* Vertical gap between spans */
+ 
+   
+}
+
+.pricedetails span {
+   display: flex;
+   justify-content: space-between;
+   width: 500px;
+ }
+
+ .pricedetails span span {
+   margin-left: 5px; /* Adjust left margin to create space between "A" and "$100" */
+ }
+

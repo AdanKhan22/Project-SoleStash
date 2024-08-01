@@ -1,14 +1,16 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
 import "./header.css";
-import sprite from "../assets/Icons/sprite.svg";
+import sprite from "../../assets/Icons/sprite.svg";
 
 export default function header() {
   const menuRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [fixNav, setFixNav] = useState(false);
 
+  //--------------------Handles the opening and closing of nav bar in mobile mode----------------//
   const handleNavToggle = () => {
+    setFixNav(!fixNav);
     setIsActive(!isActive);
     document.body.classList.toggle("active");
   };
@@ -17,33 +19,7 @@ export default function header() {
     setIsActive(false);
     document.body.classList.remove("active");
   };
-
-  const handleScrollLinkClick = () => {
-    setIsActive(false);
-    document.body.classList.remove("active");
-    console.log("hello");
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const navBar = document.querySelector(".navigation");
-      const navHeight = navBar.getBoundingClientRect().height;
-      const scrollHeight = window.pageYOffset;
-
-      if (scrollHeight > navHeight) {
-        setFixNav(true);
-      } else {
-        setFixNav(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //...................................................................................................
 
   return (
     <>
@@ -83,20 +59,12 @@ export default function header() {
                 </div>
                 <ul className="nav__list">
                   <li className="nav__item">
-                    <a
-                      href="#header"
-                      className="nav__link scroll-link"
-                      onClick={() => handleScrollLinkClick()}
-                    >
+                    <a href="#header" className="nav__link scroll-link">
                       Home
                     </a>
                   </li>
                   <li className="nav__item">
-                    <a
-                      href="#featured"
-                      className="nav__link scroll-link"
-                      onClick={() => handleScrollLinkClick()}
-                    >
+                    <a href="#featured" className="nav__link scroll-link">
                       Featured
                     </a>
                   </li>
