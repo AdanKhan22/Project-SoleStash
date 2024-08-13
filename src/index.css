@@ -7,7 +7,10 @@
   --grey-color-alt: #8492a6;
   --yellow: #ffcc00;
   --white: #ffffff;
-  --gray: rgb(220,220,220)
+  --gray: rgb(220,220,220);
+
+   --btn-clr-primary: var( --default-color);
+    
 }
 
 

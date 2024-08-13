@@ -1,0 +1,139 @@
+.custom-main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-container {
+    width: 40rem; /* Increased width */
+    height: 46rem;
+    color: #4a5568;
+    padding: 2rem; /* Increased padding */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    border-radius: 1.25rem; /* Slightly larger border radius */
+}
+
+.custom-text-center {
+    text-align: center;
+}
+
+.custom-mt {
+    margin-top: 1rem; /* Increased margin for spacing */
+}
+
+.custom-heading {
+    color: #2d3748;
+   
+    font-weight: 600;
+}
+
+.custom-form {
+    margin: 1.5rem; 
+}
+
+.custom-form div {
+    margin: 25px; 
+}
+
+.custom-label {
+   
+    color: #4a5568;
+    font-weight: bold;
+}
+
+.custom-input {
+    width: 100%;
+    margin-top: 1rem; /* Increased margin-top for spacing */
+    padding: 1rem 1.25rem; /* Increased padding */
+    color: #6b7280;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem; /* Slightly larger border radius */
+
+    transition: border-color 0.3s ease-in-out;
+}
+
+.custom-input:focus {
+    border-color: #5a67d8;
+}
+
+.custom-error {
+    color: #e53e3e;
+   
+    font-weight: bold;
+}
+
+.custom-submit {
+    width: 100%;
+    padding: 0.75rem 1.25rem; /* Increased padding */
+    color: #fff;
+    background-color: #5a67d8;
+
+    font-weight: 500;
+    border-radius: 0.75rem;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.custom-submit:hover {
+    background-color: #434190;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.custom-paragraph {
+    text-align: center;
+    
+}
+
+.custom-link {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.custom-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.custom-line {
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 0.75rem; /* Increased margin-bottom */
+    width: 100%;
+}
+
+.custom-or {
+    
+    font-weight: bold;
+    width: fit-content;
+}
+
+.custom-google-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* Increased gap size */
+    padding: 0.875rem 1.25rem; /* Increased padding */
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+   
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.custom-google-button:hover {
+    background-color: #f7fafc;
+}
+
+.custom-google-icon {
+    width: 1.5rem; /* Increased icon size */
+    height: 1.5rem; /* Increased icon size */
+}
+
+

@@ -1,6 +1,10 @@
 import React from "react";
-// import ProductBox from "./ProductBox.jsx";
+import ProductDetailsPage from "./productDetails.jsx";
 
 export default function index() {
-  return <>{/* <ProductBox></ProductBox> */}</>;
+  return (
+    <>
+      <ProductDetailsPage />
+    </>
+  );
 }

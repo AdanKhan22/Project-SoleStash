@@ -1,0 +1,145 @@
+
+  .ecom-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .ecom-navbar-logo img {
+    width: 100px; /* Adjust as needed */
+  }
+  
+  .ecom-navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .ecom-navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+  }
+  
+  .ecom-navbar-menu a:hover {
+    background-color: #444;
+    border-radius: 4px;
+  }
+  
+  .ecom-navbar-search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ecom-navbar-search input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .ecom-navbar-search button {
+    padding: 8px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .ecom-navbar-search button:hover {
+    background-color: #666;
+  }
+  
+  .ecom-navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .ecom-navbar-cart {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .ecom-shopping-icon {
+    font-size: 2.4rem;
+  }
+  
+  .ecom-cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+  }
+  
+  .ecom-navbar-signin,
+  .ecom-navbar-signup {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #555;
+  }
+  
+  .ecom-navbar-signin:hover,
+  .ecom-navbar-signup:hover {
+    background-color: #666;
+  }
+  
+
+  /* Responsive styles */
+@media (max-width: 768px) {
+    .ecom-navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .ecom-navbar-menu {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+  
+    .ecom-navbar-search {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .ecom-navbar-search input {
+      width: 80%;
+    }
+  
+    .ecom-navbar-search button {
+      width: 20%;
+    }
+  
+    .ecom-navbar-icons {
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ecom-navbar-search input {
+      width: 70%;
+    }
+  
+    .ecom-navbar-search button {
+      width: 30%;
+    }
+  
+    .ecom-navbar-icons {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }

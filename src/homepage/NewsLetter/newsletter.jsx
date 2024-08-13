@@ -6,9 +6,6 @@ export default function newsletter() {
     <>
       <section className="section newsletter" id="newsletter">
         <div className="newsletter__container container">
-          <div className="title">
-            <h1 className="primary__title">Newsletter</h1>
-          </div>
           <div className="newsletter__center">
             <div className="newsletter__box">
               <h2>Newsletter</h2>

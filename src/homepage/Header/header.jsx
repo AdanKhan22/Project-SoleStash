@@ -3,7 +3,12 @@ import { useState, useRef, useEffect } from "react";
 import "./header.css";
 import sprite from "../../assets/Icons/sprite.svg";
 
+import { useSelector, useDispatch } from "react-redux";
+import { cartOpen } from "../../State/Cart/cart.slice";
+
 export default function header() {
+  const dispatch = useDispatch();
+
   const menuRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [fixNav, setFixNav] = useState(false);
@@ -20,6 +25,10 @@ export default function header() {
     document.body.classList.remove("active");
   };
   //...................................................................................................
+
+  const openCart = () => {
+    dispatch(cartOpen());
+  };
 
   return (
     <>
@@ -95,12 +104,12 @@ export default function header() {
                       <use xlinkHref={`${sprite}#icon-search`} />
                     </svg>
                   </a>
-                  <a href="#" className="icon__item">
+                  <a href="/signin" className="icon__item">
                     <svg>
                       <use xlinkHref={`${sprite}#icon-user`} />
                     </svg>
                   </a>
-                  <a href="#" className="icon__item">
+                  <a href="#" className="icon__item" onClick={openCart}>
                     <svg>
                       <use xlinkHref={`${sprite}#icon-shopping-basket`} />
                     </svg>
