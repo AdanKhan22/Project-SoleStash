@@ -2,9 +2,7 @@ import { React, useState } from "react";
 import "./signIn.css";
 import { Navigate } from "react-router-dom";
 
-// -
 // - Firebase Authetication Imports
-// -
 import {
   doSignInWithEmailAndPassword,
   doSignInWithGoogle,
@@ -13,7 +11,7 @@ import { useAuth } from "../../../Firebase/Context/authContext/index.jsx";
 //-----------------------------------------------------------------------
 
 export default function signup() {
-  const { userLoggedIn } = useAuth();
+  const { userLoggedIn } = useAuth(); //This is a bool to check if user is logged in or not
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSigningIn, setIsSigningIn] = useState(false);
@@ -44,7 +42,7 @@ export default function signup() {
       {/* Instead of "/",  if the user is logged in he should navigate to his profile page 
             which will be implemented later in some other phase but as of now it just redirects 
             to the home */}
-      {userLoggedIn && <Navigate to={"/"} replace={true} />}
+      {userLoggedIn && <Navigate to={"/profile"} replace={true} />}
       <main className="custom-main">
         <div className="custom-container">
           <div className="custom-text-center">

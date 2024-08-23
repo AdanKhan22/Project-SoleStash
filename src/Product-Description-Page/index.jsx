@@ -1,9 +1,11 @@
 import React from "react";
-import Page from "./Product/index.jsx";
+import Navbar from "../Components/Navbar/navbar";
+import ProductDetails from "./Product/productDetails";
 export default function index() {
   return (
     <>
-      <Page></Page>
+      <Navbar></Navbar>
+      <ProductDetails></ProductDetails>
     </>
   );
 }

@@ -14,13 +14,13 @@ const Navbar = () => {
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/shop">Shop</a>
+          <a href="/">Shop</a>
         </li>
         <li>
-          <a href="/featured-products">Featured</a>
+          <a href="/">Featured</a>
         </li>
         <li>
-          <a href="/recommended-products">Recommended</a>
+          <a href="/">Recommended</a>
         </li>
       </ul>
       <div className="ecom-navbar-search">

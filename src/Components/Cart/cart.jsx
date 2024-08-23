@@ -5,9 +5,11 @@ import { cartOpen } from "../../State/Cart/cart.slice";
 
 export default function cart() {
   const isCartOpen = useSelector((state) => state.cartOpen.value);
+  const cartItems = useSelector((state) => state.cartItems.value);
   const dispatch = useDispatch();
 
   const closeCart = () => {
+    console.log(cartItems);
     dispatch(cartOpen());
     console.log(isCartOpen);
   };
@@ -24,14 +26,25 @@ export default function cart() {
           <button className="nav-cart-clearCart-btn">Clear</button>
         </div>
 
-        <div className="cart-item">
-          <img src="" alt="Product Image" className="cart-item-image" />
-          <div className="cart-item-details">
-            <h3 className="cart-item-name">Product Name</h3>
-            <p className="cart-item-size">Size: M</p>
-            <p className="cart-item-price">$19.99</p>
-          </div>
-        </div>
+        {/* Render cart items */}
+        {cartItems.length > 0 ? (
+          cartItems.map((item, index) => (
+            <div key={index} className="cart-item">
+              <img
+                src={item.imageUrl}
+                alt={item.name}
+                className="cart-item-image"
+              />
+              <div className="cart-item-details">
+                <h3 className="cart-item-name">{item.name}</h3>
+                <p className="cart-item-size">Size: {item.size}</p>
+                <p className="cart-item-price">${item.price}</p>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p>Your cart is empty.</p>
+        )}
 
         <div className="cart-footer">
           <div>
