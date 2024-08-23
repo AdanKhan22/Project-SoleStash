@@ -9,14 +9,12 @@ export default function cart() {
   const dispatch = useDispatch();
 
   const closeCart = () => {
-    console.log(cartItems);
     dispatch(cartOpen());
-    console.log(isCartOpen);
   };
 
   return (
     <>
-      <div className={isCartOpen ? "basket" : "basket-hide"}>
+      <div className={`basket ${isCartOpen ? "basket-open" : "basket-hide"}`}>
         <div className="nav-cart">
           <h2 className="nav-cart-title">My Cart</h2>
           <span className="nav-cart-noofitems">0 items</span>
@@ -51,7 +49,7 @@ export default function cart() {
             <span>Subtotal Amount</span>
             <h2>912$</h2>
           </div>
-          <button className="cart-footer-checkout-btn"></button>
+          <button className="cart-footer-checkout-btn">CheckOut</button>
         </div>
       </div>
     </>

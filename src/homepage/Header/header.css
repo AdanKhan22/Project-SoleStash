@@ -270,9 +270,18 @@
     }
   }
   
+  #cart-nav-link{
+    display: none;
+  }
+
+
   @media only screen and (max-width: 768px) {
     .hero__content h1 {
       font-size: 4rem;
+    }
+
+    #cart-nav-link{
+      display: block;
     }
   
     .hero__content h1 span {

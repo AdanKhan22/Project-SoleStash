@@ -4,7 +4,7 @@ import "./header.css";
 import sprite from "../../assets/Icons/sprite.svg";
 import { Link } from "react-router-dom";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { cartOpen } from "../../State/Cart/cart.slice";
 
 export default function header() {
@@ -20,14 +20,12 @@ export default function header() {
     setIsActive(!isActive);
     document.body.classList.toggle("active");
   };
-
-  const handleNavClose = () => {
-    setIsActive(false);
-    document.body.classList.remove("active");
-  };
   //...................................................................................................
 
   const openCart = () => {
+    if (fixNav) {
+      handleNavToggle();
+    }
     dispatch(cartOpen());
   };
 
@@ -61,7 +59,7 @@ export default function header() {
                   <h1 className="nav__category">
                     SOLE<span> STASH</span>
                   </h1>
-                  <div className="close__toggle" onClick={handleNavClose}>
+                  <div className="close__toggle" onClick={handleNavToggle}>
                     <svg>
                       <use xlinkHref={`${sprite}#icon-cross`} />
                     </svg>
@@ -69,23 +67,49 @@ export default function header() {
                 </div>
                 <ul className="nav__list">
                   <li className="nav__item">
-                    <a href="#header" className="nav__link scroll-link">
+                    <a
+                      href="#header"
+                      className="nav__link scroll-link"
+                      onClick={handleNavToggle}
+                    >
                       Home
                     </a>
                   </li>
                   <li className="nav__item">
-                    <a href="#featured" className="nav__link scroll-link">
+                    <a
+                      href="#featured"
+                      className="nav__link scroll-link"
+                      onClick={handleNavToggle}
+                    >
                       Featured
                     </a>
                   </li>
                   <li className="nav__item">
-                    <a href="#blog" className="nav__link scroll-link">
+                    <a
+                      href="#blog"
+                      className="nav__link scroll-link"
+                      onClick={handleNavToggle}
+                    >
                       Blog
                     </a>
                   </li>
                   <li className="nav__item">
-                    <a href="#newsletter" className="nav__link scroll-link">
+                    <a
+                      href="#newsletter"
+                      className="nav__link scroll-link"
+                      onClick={handleNavToggle}
+                    >
                       Subscribe
+                    </a>
+                  </li>
+                  <li className="nav__item">
+                    <a
+                      href="#featured"
+                      className="nav__link scroll-link"
+                      id="cart-nav-link"
+                      onClick={openCart}
+                    >
+                      Cart
                     </a>
                   </li>
                   {/* <li className="nav__item">
