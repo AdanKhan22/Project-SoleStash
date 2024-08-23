@@ -2,6 +2,7 @@ import React from "react";
 import "./profilePage.css";
 import { useAuth } from "../../Firebase/Context/authContext";
 import { doSignOut } from "../../Firebase/auth";
+import SignIn from "../User-Authetication-Page/SignIn/signIn";
 
 export default function profilePage() {
   const { userLoggedIn } = useAuth();
@@ -179,8 +180,7 @@ export default function profilePage() {
         </>
       ) : (
         <>
-          <h1>Login</h1>
-          <h1>Register New Account</h1>
+          <SignIn></SignIn>
         </>
       )}
     </>

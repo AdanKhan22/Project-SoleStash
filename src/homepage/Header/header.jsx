@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useRef, useEffect } from "react";
 import "./header.css";
 import sprite from "../../assets/Icons/sprite.svg";
+import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 import { cartOpen } from "../../State/Cart/cart.slice";
@@ -87,15 +88,15 @@ export default function header() {
                       Subscribe
                     </a>
                   </li>
-                  <li className="nav__item">
+                  {/* <li className="nav__item">
                     <a href="#" className="nav__link">
                       Login
                     </a>
-                  </li>
+                  </li> */}
                   <li className="nav__item">
-                    <a href="#" className="nav__link">
+                    <Link to="/signin" className="nav__link">
                       Register
-                    </a>
+                    </Link>
                   </li>
                 </ul>
                 <ul className="nav__icons">
@@ -104,11 +105,11 @@ export default function header() {
                       <use xlinkHref={`${sprite}#icon-search`} />
                     </svg>
                   </a>
-                  <a href="/signin" className="icon__item">
+                  <Link to="/profile" className="icon__item">
                     <svg>
                       <use xlinkHref={`${sprite}#icon-user`} />
                     </svg>
-                  </a>
+                  </Link>
                   <a href="#" className="icon__item" onClick={openCart}>
                     <svg>
                       <use xlinkHref={`${sprite}#icon-shopping-basket`} />
