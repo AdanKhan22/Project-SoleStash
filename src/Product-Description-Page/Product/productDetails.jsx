@@ -3,13 +3,16 @@ import Navbar from "../../Components/Navbar/navbar.jsx";
 import { inventoryProducts } from "../../ListedProducts/index.js";
 import "./productDetails.css";
 
+import Popup from "../../Components/Popups/popup.jsx";
+import Button from "../../Components/Buttons/button.jsx";
+
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../State/Cart/cartItems.slice.js";
 
 export default function ProductDetails() {
   const [lastSegment, setLastSegment] = useState("");
   const [currentItem, setCurrentItem] = useState({});
-
+  const [itemAdded, setItemAdded] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -33,6 +36,7 @@ export default function ProductDetails() {
   }, [lastSegment]);
 
   const fnaddToCart = () => {
+    setItemAdded(true);
     const product = inventoryProducts.find((item) => item.Id == lastSegment);
 
     if (product) {
@@ -78,7 +82,11 @@ export default function ProductDetails() {
               <div className="quantity">
                 <input type="number" defaultValue={1} min={1} />
                 {/* Disable the button after item has been added */}
-                <button onClick={fnaddToCart}>Add to Cart</button>
+                <Button
+                  onClick={fnaddToCart}
+                  isDisabled={itemAdded}
+                  text="Add to Cart"
+                ></Button>
               </div>
               <div>
                 <p>Delivery:</p>
@@ -112,6 +120,7 @@ export default function ProductDetails() {
           </section>
         </div>
       </div>
+      {itemAdded ? <Popup></Popup> : ""}
     </>
   );
 }

@@ -1,49 +1,63 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "./Navbar.css";
+import sprite from "../../assets/Icons/sprite.svg";
+import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
+import { BsCart } from "react-icons/bs";
+import { FaUserCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const CustomNavbar = () => {
+  const [menuActive, setMenuActive] = useState(false);
+  const menuRef = useRef(null);
+
+  const handleNavToggle = () => {
+    setMenuActive(!menuActive);
+  };
+
   return (
-    <nav className="ecom-navbar">
-      <div className="ecom-navbar-logo">
-        <a href="/">
-          <img alt="Logo" src="path/to/logo.png" />
-        </a>
-      </div>
-      <ul className="ecom-navbar-menu">
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/">Shop</a>
-        </li>
-        <li>
-          <a href="/">Featured</a>
-        </li>
-        <li>
-          <a href="/">Recommended</a>
-        </li>
-      </ul>
-      <div className="ecom-navbar-search">
-        <input type="text" placeholder="Search..." />
-        <button type="button">Search</button>
-      </div>
-      <div className="ecom-navbar-icons">
-        <a href="/cart" className="ecom-navbar-cart">
-          <img
-            className="ecom-shopping-icon"
-            style={{ fontSize: "2.4rem" }}
-          ></img>
-          <span className="ecom-cart-count">5</span>
-        </a>
-        <a href="/signin" className="ecom-navbar-signin">
-          Sign In
-        </a>
-        <a href="/signup" className="ecom-navbar-signup">
-          Sign Up
-        </a>
-      </div>
-    </nav>
+    <div
+      className={`custom-navbar-wrapper ${menuActive ? "overlay-active" : ""}`}
+    >
+      <nav className="fixed-top-bar">
+        <div className="nav-container">
+          <div className="logo-section">
+            <h1>
+              Sole<span>Stash</span>
+            </h1>
+          </div>
+          <div
+            className="menu-panel"
+            ref={menuRef}
+            style={{ left: menuActive ? "0" : "-40rem" }}
+          >
+            <div className="menu-top">
+              <GiCancel className="close-btn" onClick={handleNavToggle} />
+            </div>
+            <div className="nav-items">
+              <div className="nav-item">
+                <Link to="/" className="nav-link">
+                  Home
+                </Link>
+              </div>
+              <div className="nav-item">
+                <Link to="/contact" className="nav-link">
+                  <svg>
+                    <use xlinkHref={`${sprite}#icon-shopping-basket`} />
+                  </svg>
+                </Link>
+              </div>
+              <div className="nav-item">
+                <Link to="/profile" className="nav-link">
+                  <p>Profile</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <GiHamburgerMenu className="menu-btn" onClick={handleNavToggle} />
+        </div>
+      </nav>
+    </div>
   );
 };
 
-export default Navbar;
+export default CustomNavbar;

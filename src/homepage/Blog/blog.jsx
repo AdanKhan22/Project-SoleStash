@@ -12,7 +12,7 @@ export default function blog() {
           <div className="blog__center">
             <div className="blog__box">
               <div className="img__cover">
-                <img src="./images/blog1.jpg" alt="" />
+                <img src="" alt="" />
               </div>
               <div className="box__content">
                 <h2>Here are the trends I see coming this fall</h2>
@@ -21,7 +21,7 @@ export default function blog() {
             </div>
             <div className="blog__box">
               <div className="img__cover">
-                <img src="./images/blog2.jpg" alt="" />
+                <img src="" alt="" />
               </div>
               <div className="box__content">
                 <h2>Here are the trends I see coming this fall</h2>
@@ -30,7 +30,7 @@ export default function blog() {
             </div>
             <div className="blog__box">
               <div className="img__cover">
-                <img src="./images/blog3.jpg" alt="" />
+                <img src="" alt="" />
               </div>
               <div className="box__content">
                 <h2>Here are the trends I see coming this fall</h2>
