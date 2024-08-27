@@ -1,16 +1,3 @@
-import vans from "../assets/vans1.webp"
-import jordons from "../assets/jordons.avif"
-import product1 from "../assets/product (1).jpg";
-import product2 from  "../assets/product (2).jpg"
-import product3 from  "../assets/product (3).jpg"
-import product4 from  "../assets/product (4).jpg"
-import product5 from  "../assets/product (5).jpg"
-import product6 from  "../assets/product (6).jpg"
-import product7 from  "../assets/product (7).jpg"
-import product8 from  "../assets/product (8).jpg"
-import product9 from  "../assets/product (9).jpg"
-import product10 from  "../assets/product (10).jpg"
-
 
 const inventoryProducts = [
   {
@@ -20,7 +7,7 @@ const inventoryProducts = [
     condition: "9/10",
     price: "4500",
     size: '12',
-    image: vans,
+    image: "https://i.ibb.co/XtRpZCB/vans1.webp",
     inInventory: true
   },
   {
@@ -30,7 +17,7 @@ const inventoryProducts = [
     condition: "8/10",
     price: "1300",
     size: '7',
-    image: jordons, 
+    image: "https://i.ibb.co/Qv6LyM2/jordons.jpg", 
     inInventory: true
   },
   {
@@ -40,7 +27,7 @@ const inventoryProducts = [
     condition: "9/10",
     price: "1250",
     size: '9',
-    image: product1, 
+    image: "https://i.ibb.co/B2wpkSr/product-1.webp", 
     inInventory: true
   },
   {
@@ -50,7 +37,7 @@ const inventoryProducts = [
     condition: "9/10",
     price: "1450",
     size: '7',
-    image: product2, 
+    image: "https://i.ibb.co/mvXh33G/product-2.webp", 
     inInventory: true
   },
   {
@@ -60,7 +47,7 @@ const inventoryProducts = [
     condition: "8/10",
     price: "5000",
     size: '9',
-    image: product3, 
+    image: "https://i.ibb.co/zbFQbLv/product-3.jpg", 
     inInventory: true
   },
   {
@@ -70,7 +57,7 @@ const inventoryProducts = [
     condition: "9/10",
     price: "3500",
     size: '10.5',
-    image: product4, 
+    image: "https://i.ibb.co/swtGfC3/product-4.png", 
     inInventory: true
   },
   {
@@ -80,7 +67,7 @@ const inventoryProducts = [
     condition: "9/10",
     price: "3500",
     size: '11',
-    image: product5, 
+    image: "https://i.ibb.co/0CCqT8D/product-5.jpg", 
     inInventory: true
   },
   {
@@ -90,7 +77,7 @@ const inventoryProducts = [
     condition: "8/10",
     price: "3500",
     size: '6',
-    image: product6,
+    image: "https://i.ibb.co/hKP5K7L/product-6.jpg",
     inInventory: true
   },
   {
@@ -100,7 +87,7 @@ const inventoryProducts = [
     condition: "9/10",
     price: "3500",
     size: '10',
-    image: product7,
+    image: "https://i.ibb.co/16m1GpV/product-7.jpg",
     inInventory: true
   },
   {
@@ -110,7 +97,7 @@ const inventoryProducts = [
     condition: "9/10",
     size: '9.5',
     price: "3500",
-    image: product8,
+    image: "https://i.ibb.co/HK09yLV/product-8.jpg",
     inInventory: true
   }
 ];
@@ -118,17 +105,4 @@ const inventoryProducts = [
 
 export  {
   inventoryProducts,
-  vans,
- jordons,
- product1,
- product2,
-product3,
-product4,
-product5,
-product6,
-product7,
-product8,
-product9,
-product10
-
 };

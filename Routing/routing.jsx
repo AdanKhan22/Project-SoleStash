@@ -1,42 +1,77 @@
-import App from "../src/App.jsx";
-import PaymentPage from "../src/Payment-Page/index.jsx";
-import ProductDec from "../src/Product-Description-Page/index.jsx";
-import SignUp from "../src/User-Authetication-Page/SignUp/signup.jsx";
-import SignIn from "../src/User-Authetication-Page/SignIn/signIn.jsx";
-import ProfilePage from "../src/Profile-Page/profilePage.jsx";
-import Page404 from "../src/404/page404.jsx";
-
+import React, { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import { defaultSerializeQueryArgs } from "@reduxjs/toolkit/query";
 
+const App = lazy(() => import("../src/App.jsx"));
+const PaymentPage = lazy(() => import("../src/Payment-Page/index.jsx"));
+const ProductDec = lazy(() =>
+  import("../src/Product-Description-Page/index.jsx")
+);
+const SignUp = lazy(() =>
+  import("../src/User-Authetication-Page/SignUp/signup.jsx")
+);
+const SignIn = lazy(() =>
+  import("../src/User-Authetication-Page/SignIn/signIn.jsx")
+);
+const ProfilePage = lazy(() => import("../src/Profile-Page/profilePage.jsx"));
+const Page404 = lazy(() => import("../src/404/page404.jsx"));
+
+//To Create Loading Screens Later...
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <App />
+      </Suspense>
+    ),
   },
   {
     path: "/payment",
-    element: <PaymentPage />,
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <PaymentPage />
+      </Suspense>
+    ),
   },
   {
     path: "/SignUp",
-    element: <SignUp />,
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <SignUp />
+      </Suspense>
+    ),
   },
   {
     path: "/signin",
-    element: <SignIn />,
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <SignIn />
+      </Suspense>
+    ),
   },
   {
     path: "/profile",
-    element: <ProfilePage />,
-  },
-  {
-    path: "*",
-    element: <Page404 />,
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <ProfilePage />
+      </Suspense>
+    ),
   },
   {
     path: "/products/:id",
-    element: <ProductDec />,
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <ProductDec />
+      </Suspense>
+    ),
+  },
+  {
+    path: "*",
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <Page404 />
+      </Suspense>
+    ),
   },
 ]);
 
