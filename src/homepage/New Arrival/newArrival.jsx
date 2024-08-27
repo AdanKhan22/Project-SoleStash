@@ -18,6 +18,7 @@ export default function newArrival() {
               title={product.name}
               image={product.image}
               price={product.price}
+              size={product.size}
               condition={product.condition}
               inInventory={product.inInventory}
             />

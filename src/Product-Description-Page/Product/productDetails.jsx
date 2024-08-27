@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../../Components/Navbar/navbar.jsx";
 import { inventoryProducts } from "../../ListedProducts/index.js";
 import "./productDetails.css";
 
+//<--=========Components========-->
 import Popup from "../../Components/Popups/popup.jsx";
 import Button from "../../Components/Buttons/button.jsx";
 
+//<--=========Redux========-->
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../State/Cart/cartItems.slice.js";
 
@@ -31,7 +32,6 @@ export default function ProductDetails() {
         size: product.size,
         condition: product.condition,
       });
-      console.log(currentItem.name);
     }
   }, [lastSegment]);
 
@@ -81,7 +81,6 @@ export default function ProductDetails() {
               </div>
               <div className="quantity">
                 <input type="number" defaultValue={1} min={1} />
-                {/* Disable the button after item has been added */}
                 <Button
                   onClick={fnaddToCart}
                   isDisabled={itemAdded}

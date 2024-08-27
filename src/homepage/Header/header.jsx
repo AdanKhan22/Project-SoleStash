@@ -1,6 +1,6 @@
 import React from "react";
-import { useState, useRef, useEffect } from "react";
 import "./header.css";
+import { useState, useRef } from "react";
 import sprite from "../../assets/Icons/sprite.svg";
 import { Link } from "react-router-dom";
 
@@ -154,7 +154,7 @@ export default function header() {
               </span>
               <span>Where Thrifted Shoes and Happy Feet Meet!</span>
             </h1>
-            <a href="#" className="btn btn-hero">
+            <a href="#new__arrival" className="btn btn-hero">
               shop now
             </a>
           </div>

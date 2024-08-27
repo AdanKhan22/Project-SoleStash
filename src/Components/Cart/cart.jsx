@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./cart.css";
+
+//<--======Redux Imports=========-->//
+
 import { useSelector, useDispatch } from "react-redux";
 import { cartOpen } from "../../State/Cart/cart.slice";
 import { removeFromCart } from "../../State/Cart/cartItems.slice";
-import { Link } from "react-router-dom";
+
+//<--====Components=========-->//
 import Button from "../Buttons/button";
 
 export default function cart() {
@@ -15,7 +20,7 @@ export default function cart() {
   const [isEmptyCartClicked, setisEmptyCartClicked] = useState(false);
   const [totalAmount, setTotalAmount] = useState(0);
 
-  //For now i am using useEffect for displaying cartItems but i might change this later
+  /*For now i am using useEffect for displaying cartItems but i might change this later*/
   useEffect(() => {
     if (cartItems.length <= 0) {
       setDisplayCartItems(0);
@@ -72,7 +77,7 @@ export default function cart() {
               <div className="cart-item-details">
                 <h3 className="cart-item-name">{item.name}</h3>
                 <p className="cart-item-size">Size: {item.size}</p>
-                <p className="cart-item-price">${item.price}</p>
+                <p className="cart-item-price">{item.price} Rs</p>
               </div>
             </div>
           ))

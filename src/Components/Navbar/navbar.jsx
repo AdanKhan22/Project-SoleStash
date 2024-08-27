@@ -1,19 +1,22 @@
 import React, { useState, useRef } from "react";
-import "./Navbar.css";
-
-import sprite from "../../assets/Icons/sprite.svg";
-import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import Cart from "../Cart/cart";
+import "./Navbar.css";
 
 //<--===========Redux Imports ==========--->
 import { useDispatch } from "react-redux";
 import { cartOpen } from "../../State/Cart/cart.slice";
 
+//<--=========== Icons (temporary) ==========--->
+import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
+import sprite from "../../assets/Icons/sprite.svg";
+
+//<--====Components=========-->//
+import Cart from "../Cart/cart";
+
 export default function CustomNavbar() {
-  const dispatch = useDispatch();
   const [menuActive, setMenuActive] = useState(false);
   const menuRef = useRef(null);
+  const dispatch = useDispatch();
 
   const handleNavToggle = () => {
     setMenuActive(!menuActive);

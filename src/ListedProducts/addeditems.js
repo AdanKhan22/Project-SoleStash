@@ -1,5 +1,0 @@
-const addedItems = [
- 
-];
-
-export {addedItems};

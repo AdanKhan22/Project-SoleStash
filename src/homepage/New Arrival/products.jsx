@@ -7,6 +7,7 @@ export default function products({
   title,
   image,
   price,
+  size,
   condition,
   inInventory,
 }) {
@@ -24,9 +25,9 @@ export default function products({
 
             <div className="rating">
               <span id="__price">RS {price}</span>
-              <span id="__size">Size</span>
+              <span id="__size">Size {size}</span>
             </div>
-            <span>Conditon</span>
+            <span>Condtion {condition}</span>
             <div className="btn-addToCart">
               <Link to={`/products/${Id}`}>Add To Cart</Link>
             </div>

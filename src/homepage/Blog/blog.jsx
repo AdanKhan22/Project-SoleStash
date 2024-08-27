@@ -1,4 +1,9 @@
-import React from "react";
+/*
+  Might remove the blog entirely or add something different later
+  Ideas: Why Choose Us Section?
+         Customer Opinions Sections?
+*/
+
 import "./blog.css";
 
 export default function blog() {

@@ -1,3 +1,6 @@
+/*Lots of links might be removed due to the shortage 
+   of time of implementing every feature*/
+
 import React from "react";
 import "./footer.css";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import "./button.css";
 
 export default function Button({ onClick, isDisabled, text }) {
