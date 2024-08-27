@@ -124,11 +124,11 @@ export default function header() {
                   </li>
                 </ul>
                 <ul className="nav__icons">
-                  <a href="#" className="icon__item">
+                  {/* <a href="#" className="icon__item">
                     <svg>
                       <use xlinkHref={`${sprite}#icon-search`} />
                     </svg>
-                  </a>
+                  </a> */}
                   <Link to="/profile" className="icon__item">
                     <svg>
                       <use xlinkHref={`${sprite}#icon-user`} />

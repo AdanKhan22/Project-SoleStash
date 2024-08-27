@@ -36,7 +36,7 @@ export default function CustomNavbar() {
           <div className="nav-container">
             <div className="logo-section">
               <h1>
-                Sole<span>Stash</span>
+                Sole <span> Stash </span>
               </h1>
             </div>
             <div
@@ -44,7 +44,10 @@ export default function CustomNavbar() {
               ref={menuRef}
               style={{ left: menuActive ? "0" : "-40rem" }}
             >
-              <div className="menu-top">
+              <div
+                className="menu-top"
+                style={{ opacity: menuActive ? "100" : "0" }}
+              >
                 <GiCancel className="close-btn" onClick={handleNavToggle} />
               </div>
               <div className="nav-items">

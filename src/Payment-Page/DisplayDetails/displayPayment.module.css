@@ -1,83 +1,105 @@
-.wrappermain{
+.wrappermain {
    display: flex;
    flex-direction: column;
-   position: relative;
-   width: 50%;
    align-items: center;
    justify-content: center;
-}
-
-.wrapper {
+   width: 100%;
+   max-width: 600px;
+   margin: 0 auto;
+   padding: 20px;
+ }
+ 
+ .wrapper {
    display: flex;
    flex-direction: row;
-   color: red;
-   gap: 50px;
+   align-items: center;
+   justify-content: space-between; /* Space between left and right */
+   gap: 20px;
    padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.wrapperin{
-   display: flex; /* Apply flexbox to arrange children */
-   flex-direction: row; /* Arrange children in a row */
-   justify-content: space-between; /* Distribute children evenly */
-   
-}
-
-.productImage {
-   width: 70px;
-   height: 70px; 
-}
-
-.textWrapper005 {
-   display: flex; /* Apply flexbox to arrange children */
-   flex-direction: column; /* Arrange children in a row */
-   margin: 10px 10px 10px 10px;
-   
-  
-}
-.pricetag13 {
-   display: flex; /* Apply flexbox to arrange children */
-   flex-direction: column; /* Arrange children in a row */
-   margin: 10px 10px 10px 10px;
-}
-.couponinsert {
-  /* Add styles for couponinsert here */
-}
-
-.discountform {
-  
-
-}
-
-.discount-input {
-   position: relative;
-   height: 30px;
-   width: 300px;
-   margin: 10px;
-}
-
-.discount-btn {
-  /* Add styles for discount-btn here */
-}
-
-.pricedetails {
-
-   display: flex; /* Apply flexbox to arrange children */
-   flex-direction: column; /* Arrange children in a row */
-   margin: 10px 10px 10px 10px;
-   gap: 10px; /* Vertical gap between spans */
+   width: 100%;
+ }
  
-   
+ .wrapperin {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 10px;
+ }
+ 
+ .productImage {
+   width: 70px;
+   height: 70px;
+   border-radius: 5px;
+ }
+ 
+ .textWrapper005 {
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+   color: white;
+ }
+ 
+ .text0034 {
+   font-size: 14px;
+   color: white;
 }
-
-.pricedetails span {
+ 
+ .pricetag13 {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end; /* Align price to the right */
+ }
+ 
+ .pricetag13 #pricetagtext {
+   font-size: 16px;
+   color: #333;
+ }
+ 
+ .couponinsert {
+   margin-top: 20px;
+   width: 100%;
+ }
+ 
+ .discountform {
+   display: flex;
+   gap: 10px;
+ }
+ 
+ .discount-input {
+   flex: 1; /* Allow input to take available space */
+   height: 40px;
+   padding: 0 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 14px;
+ }
+ 
+ .discount-btn {
+   background-color: #f15a29; /* Button color */
+   color: #fff;
+   padding: 0 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   font-size: 14px;
+ }
+ 
+ .pricedetails {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-top: 20px;
+   width: 100%;
+ }
+ 
+ .pricedetails span {
    display: flex;
    justify-content: space-between;
-   width: 500px;
+   font-size: 16px;
  }
-
+ 
  .pricedetails span span {
-   margin-left: 5px; /* Adjust left margin to create space between "A" and "$100" */
+   font-weight: bold;
  }
-
+ 
