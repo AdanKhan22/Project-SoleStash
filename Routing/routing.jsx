@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
+import Loading from "../src/Components/Loading-Screen/loading.jsx";
 
 const App = lazy(() => import("../src/App.jsx"));
 const PaymentPage = lazy(() => import("../src/Payment-Page/index.jsx"));
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <App />
       </Suspense>
     ),
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
   {
     path: "/payment",
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <PaymentPage />
       </Suspense>
     ),
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
   {
     path: "/SignUp",
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <SignUp />
       </Suspense>
     ),
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
   {
     path: "/signin",
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <SignIn />
       </Suspense>
     ),
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <ProfilePage />
       </Suspense>
     ),
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
   {
     path: "/products/:id",
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <ProductDec />
       </Suspense>
     ),
@@ -68,7 +69,7 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: (
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <Page404 />
       </Suspense>
     ),
