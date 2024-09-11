@@ -2,35 +2,33 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Sole-Stash is an e-commerce website that primarly deals with selling thrifted shoes
-
-## Table of Contents
-
-- [Project Name](#Sole-Stash)
-  - [Table of Contents](#table-of-contents)
-  - [Demo](#demo)
-  - [Features](#features)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Running the Project](#running-the-project)
-  - [Usage](#usage)
-  - [Project Structure](#project-structure)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Acknowledgements](#acknowledgements)
-
-## Demo
-
-Coming Soon....
+Sole-Stash is an e-commerce website primarily focused on selling **thrifted shoes**. Built with modern web technologies, it offers users a clean, intuitive platform for browsing, selecting, and purchasing pre-owned shoes.
 
 ## Features
 
--Includes Front-End Pages i.e Product Pag, Cart , Description , Homepage 
+- **Product Listings**: Browse through a collection of thrifted shoes with detailed descriptions, images, and pricing.
+- **Search & Filter**: Filter by brand, size, price range, or condition.
+- **Shopping Cart**: Add items to a cart and proceed to checkout with real-time updates.
+- **User Authentication**: Secure user login and registration using Firebase Authentication.
+- **Payment Integration**: Integrated with secure payment gateways.
+- **Order Management**: View order history and track real-time updates on orders.
 
--Project to be transformed into full-stack in Phase 2 
+## Technologies
 
--For database I'll be using MySQL
+- **JavaScript (JS)**: The core programming language for frontend interactions.
+- **Laravel**: For backend primarly inteacting with the DB (Not Yet Integrated).
+- **React**: For building responsive and reusable user interface components.
+- **Redux**: For managing and synchronizing the application state across components.
+- **CSS**: For styling and layout.
+- **Firebase**:
+  - **Authentication**: Handles user login and registration.  
+- **MYSQL**: Stores product data, user information, and orders (Not Yet Integrated).
+- **Vercel**: Used to deploy and serve the website.
+  
+
+## Demo
+
+https://project-sole-stash.vercel.app
 
 ## Getting Started
 
@@ -59,6 +57,26 @@ List of software and tools needed to run the project.
     # or
     yarn install
     ```
+
+### Create a new firebase project
+
+Login to your Google account and create a new Firebase project [HERE](https://console.firebase.google.com/).
+
+Create an .env file and add the following variables.
+
+
+```env
+
+// SAMPLE CONFIG .env, you should put the actual config details found on your project settings
+
+VITE_FIREBASE_API_KEY=AIzaKJgkjhSdfSgkjhdkKJdkjowf
+VITE_FIREBASE_AUTH_DOMAIN=yourauthdomin.firebaseapp.com
+VITE_FIREBASE_DB_URL=https://yourdburl.firebaseio.com
+VITE_FIREBASE_PROJECT_ID=yourproject-id
+VITE_FIREBASE_STORAGE_BUCKET=yourstoragebucket.appspot.com
+VITE_FIREBASE_MSG_SENDER_ID=43597918523958
+VITE_FIREBASE_APP_ID=234598789798798fg3-034
+```
 
 ### Running the Project
 
